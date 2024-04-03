@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt
+import time
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, reason_code, properties):
@@ -17,6 +18,7 @@ def on_message(client, userdata, msg):
         if "buzz" in utfmsg[0]:
             mqttc.publish("Winner", f"you win {utfmsg[1]}")
             print("Winner", utfmsg[1])
+            time.sleep(5)
         
     else:
         pass
