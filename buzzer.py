@@ -19,7 +19,6 @@ def on_message(client, userdata, msg):
             mqttc.publish("Winner", f"you win {utfmsg[1]}")
             print("Winner", utfmsg[1])
             time.sleep(5)
-        
     else:
         pass
 
