@@ -1,0 +1,1 @@
+heres the code that reads the txt and checks it
